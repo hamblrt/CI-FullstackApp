@@ -35,15 +35,15 @@ jobs:
 
       # Install the dependencies.
       - name: Install node dependencies
-        run: cd backend && npm install
+        run: cd backend && npm ci
 
       # Run the tests.
       - name: Run node tests
         run: cd backend && npm test
 
       # Setup the linter
-      - name: Linter needs a config to work
-        run: cd backend && npm init @eslint/config
+      #- name: Linter needs a config to work
+      #  run: cd backend && npm init @eslint/config
 
       # Run the linter.
       - name: Run code linter
