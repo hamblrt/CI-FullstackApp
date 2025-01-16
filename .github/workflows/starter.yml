@@ -35,15 +35,15 @@ jobs:
 
       # Install the dependencies.
       - name: Install node dependencies
-        run: npm install
+        run: cd backend && npm install
 
       # Run the tests.
       - name: Run node tests
-        run: npm test
+        run: cd backend && npm test
 
       # Run the linter.
       - name: Run code linter
-        run: npm ESlint
+        run: cd backend && npm run lint
 
       # Send a console message at completion.
       - run: |
