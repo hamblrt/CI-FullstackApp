@@ -41,6 +41,10 @@ jobs:
       - name: Run node tests
         run: cd backend && npm test
 
+      # Setup the linter
+      - name: Linter needs a config to work
+        run: cd backend && npm init @eslint/config
+
       # Run the linter.
       - name: Run code linter
         run: cd backend && npm run lint
